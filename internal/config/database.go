@@ -1,7 +1,7 @@
-package database
+package config
 
 import (
-	"learn-go-in-orm/models"
+	"learn-go-in-orm/internal/models"
 	"log"
 
 	"gorm.io/driver/mysql"
