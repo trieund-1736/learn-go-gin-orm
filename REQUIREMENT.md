@@ -24,3 +24,34 @@ These are functions that handle the logic for each route:
 - **Interact with Database (GORM)**: Use GORM methods (`Create`, `Find`, `First`, `Where`, `Save`, `Updates`, `Delete`, `Preload`, etc.) to perform database operations based on the input data.
 - **Error Handling**: Check and handle potential errors from binding, validation, or GORM operations (e.g., `gorm.ErrRecordNotFound`, connection errors, timeouts).
 - **Return Response**: Send a response back to the client, typically in JSON format, along with an appropriate HTTP status code (`200 OK`, `201 Created`, `400 Bad Request`, `404 Not Found`, `500 Internal Server Error`, etc.).
+
+---
+
+## Project Description
+
+A REST API application for managing users built with Go, Gin framework, and GORM ORM. Supports CRUD operations with proper validation and error handling.
+
+## Database Schema
+
+### Users Table
+
+```text
+id (PK, auto-increment)
+name (VARCHAR, required)
+email (VARCHAR, unique, required)
+password (VARCHAR, hashed, required)
+phone (VARCHAR, optional)
+created_at (TIMESTAMP)
+updated_at (TIMESTAMP)
+deleted_at (TIMESTAMP, soft delete)
+```
+
+## API Endpoints
+
+| Method | Endpoint            | Description                      |
+| ------ | ------------------- | -------------------------------- |
+| GET    | `/api/v1/users`     | List all users (with pagination) |
+| POST   | `/api/v1/users`     | Create new user                  |
+| GET    | `/api/v1/users/:id` | Get user by ID                   |
+| PUT    | `/api/v1/users/:id` | Update user                      |
+| DELETE | `/api/v1/users/:id` | Delete user                      |
