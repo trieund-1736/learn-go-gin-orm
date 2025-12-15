@@ -39,7 +39,6 @@ A REST API application for managing users built with Go, Gin framework, and GORM
 id (PK, auto-increment)
 name (VARCHAR, required)
 email (VARCHAR, unique, required)
-password (VARCHAR, hashed, required)
 phone (VARCHAR, optional)
 created_at (TIMESTAMP)
 updated_at (TIMESTAMP)
