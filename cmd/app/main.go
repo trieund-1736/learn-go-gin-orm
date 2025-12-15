@@ -10,7 +10,7 @@ import (
 
 func main() {
 	// Initialize database
-	dsn := "root:@tcp(127.0.0.1:3306)/learn_go_gin_orm?charset=utf8mb4&parseTime=True&loc=Local"
+	dsn := "root:password@tcp(localhost:3306)/learn_go_gin_orm?charset=utf8mb4&parseTime=True&loc=Local"
 	if err := config.InitDB(dsn); err != nil {
 		log.Fatalf("Failed to initialize database: %v", err)
 	}
